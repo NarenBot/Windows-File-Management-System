@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Windows File Management System</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+
+</head>
+
+<body>
+    <h2>Windows File Management System</h2>
+
+    <div class="container">
+        <form action="{{url_for('arrange_files')}}" method="post">
+            <label>Enter the desired path:</label>
+            <input type="text" name="path" placeholder="Enter the path here..." required="required" />
+            <br><br>
+            <button type="submit">Submit</button>
+            <a type="button" href="{{url_for('index')}}">Reset</a>
+        </form>
+
+    </div>
+
+    <div id="output">{{output}}</div>
+</body>
